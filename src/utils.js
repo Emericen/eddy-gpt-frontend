@@ -1,4 +1,4 @@
-const url = "http://127.0.0.1:5000";
+const url = "https://a4be-23-241-104-9.ngrok.io";
 
 export const getNumber = () => {
   return fetch(`${url}/get_number`, {
