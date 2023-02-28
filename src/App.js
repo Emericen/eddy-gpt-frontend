@@ -21,21 +21,20 @@ class App extends React.Component {
     const formData = new FormData(event.target);
     let data = Object.fromEntries(formData.entries());
 
-	this.setState({
-		loading: true
-	})
-	generate(data)
-		.then((response) => {
-			console.log(response)
-			this.setState({generated: response.output})
-		})
-		.catch((err) => {
-			this.setState({generated: "ERROR: unable to generate"})
-		})
-		.finally(() => {
-			this.setState({loading: false})
-		})
-
+    this.setState({
+      loading: true,
+    });
+    generate(data)
+      .then((response) => {
+        console.log(response);
+        this.setState({ generated: response.output });
+      })
+      .catch((err) => {
+        this.setState({ generated: "ERROR: unable to generate" });
+      })
+      .finally(() => {
+        this.setState({ loading: false });
+      });
   };
 
   render = () => {
@@ -67,7 +66,7 @@ class App extends React.Component {
                     id="outlined-number"
                     label="Token Number"
                     name="tokens"
-					type="number"
+                    type="number"
                     InputLabelProps={{
                       shrink: true,
                     }}
