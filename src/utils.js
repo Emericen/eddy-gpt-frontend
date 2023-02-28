@@ -1,4 +1,4 @@
-const url = "https://b1aa-23-241-104-9.ngrok.io";
+const url = "https://fe63-23-241-104-9.ngrok.io";
 
 export const getNumber = () => {
   return fetch(`${url}/get_number`, {
